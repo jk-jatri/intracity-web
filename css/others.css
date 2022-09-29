@@ -1,0 +1,75 @@
+/* @layer components{} can be ignored. */
+.StepProgress {
+     position: relative;
+     list-style: none;
+}
+.StepProgress-item:before {
+     display: inline-block;
+     content: '';
+     position: absolute;
+     top: 2px;
+     left: 10px;
+     width: 4px;
+     height: 100%;
+     border-left: 4px solid #dbdbdb;
+}
+.StepProgress-item:last-child::before {
+     display: inline-block;
+     content: '';
+     position: absolute;
+     top: 2px;
+     width: 10px;
+     height: 100%;
+     border-left: 0px;
+}
+.StepProgress-item {
+     position: relative;
+     counter-increment: list;
+}
+
+.StepProgress-item span {
+     margin-left: 35px;
+}
+
+.StepProgress-item:not(:last-child) {
+     padding-bottom: 20px;
+}
+.StepProgress-item::before {
+     display: inline-block;
+     content: '';
+     position: absolute;
+     height: 100%;
+     width: 4px;
+}
+.StepProgress-item::after {
+     content: '';
+     display: inline-block;
+     position: absolute;
+     top: 2px;
+     left: 0px;
+     width: 24px;
+     height: 24px;
+     border: 4px solid #fff;
+     border-radius: 50%;
+     background-color: #fff !important;
+     background: url("../assets/images/tracker-all-child.svg");
+     background-repeat: no-repeat;
+     background-position: center;
+     box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.25);
+}
+
+.StepProgress-item:first-child::after {
+     background-color: #fff !important;
+     background: url("../assets/images/tracker-first-child.svg");
+     background-repeat: no-repeat;
+     background-position: center;
+     box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.25);
+}
+
+.StepProgress-item:last-child::after {
+     background-color: #fff !important;
+     background: url("../assets/images/tracker-last-child.svg");
+     background-repeat: no-repeat;
+     background-position: center;
+     box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.25);
+}
